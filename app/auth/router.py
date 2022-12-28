@@ -5,9 +5,7 @@ from . import schemas,dependencies,security
 from sqlalchemy.orm import Session
 from databases.config import get_db
 from .users import router as users_routes
-
-
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+from constants import ACCESS_TOKEN_EXPIRE_MINUTES
 
 
 router = APIRouter(

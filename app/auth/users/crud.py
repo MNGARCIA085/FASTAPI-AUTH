@@ -2,6 +2,7 @@ from fastapi import Depends
 from .. import schemas,models
 from sqlalchemy.orm import Session
 from databases.config import get_db
+from ..security import get_password_hash
 
 
 def post_user(user: schemas.UserLogin, db: Session = Depends(get_db)):
