@@ -9,7 +9,8 @@ from config import settings
 from constants import ALGORITHM
 
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/token") #http://127.0.0.1:8000/auth/token
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login") # /token
+#http://127.0.0.1:8000/auth/token
 
 
 async def get_current_user(token: str = Depends(oauth2_scheme), db:Session = Depends(get_db)):

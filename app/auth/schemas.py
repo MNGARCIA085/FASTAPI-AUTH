@@ -25,8 +25,4 @@ class UserInDB(User):
 
 #
 class UserLogin(User):
-    username: str
-    email: str | None = None
-    full_name: str | None = None
-    disabled: bool | None = None
     password: str # luego serán 2
